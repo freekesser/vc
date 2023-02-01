@@ -1,0 +1,38 @@
+<html>  
+    <head>
+        <title>Visual cryptography</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script src="app.js"></script>
+        <script src="p5.min.js"></script>
+        <script src="p5.dom.min.js"></script>
+    </head>
+    <body>
+        <div class="w-50 m-auto" style="margin-top:50px !important">
+            <h3 class="mb-3">Visual cryptography demo by Giulia, Micha & Freek</h3>
+                <div class="input-group">
+                    <div class="row">
+                        <div class="input-group m-2 col-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon3">Columns</span>
+                            </div>
+                            <input type="text" class="form-control" id="colsText" name="cols">
+                        </div>
+                        <div class="input-group m-2 col-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon3">Rows</span>
+                            </div>
+                            <input type="text" class="form-control" id="rowsText" name="rows">
+                        </div>
+                        <button class="btn btn-primary m-2 col-sm" onclick="setColsRows(colsText.value, rowsText.value)">Update size</button>
+                    </div>
+
+                    <div id="sketch-holder" class="mt-5 mb-5"><!--here's the canva--></div>
+                </div>
+            <div class="row">
+                <button class="btn btn-primary mt-2 col-sm m-2" onclick="cipher()">Encrypt!</button>
+                <button class="btn btn-primary mt-2 col-sm m-2" onclick="overlay()">Show result</button>
+            </div>
+        </div>
+    </body>
+</html>
